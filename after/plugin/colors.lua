@@ -11,4 +11,4 @@ function SetLatte(color)
 	vim.cmd.colorscheme(color)
 end
 
-SetMocha()
+SetLatte()
