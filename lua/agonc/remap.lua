@@ -24,4 +24,5 @@ vim.keymap.set('n', '<leader>w', ':bn<CR>')
 
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
 

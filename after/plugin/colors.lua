@@ -1,14 +1,8 @@
-function SetMocha(color)
-	color = color or "catppuccin-mocha"
-	vim.cmd.colorscheme(color)
-end
-function SetFrappe(color)
-	color = color or "catppuccin-frappe"
-	vim.cmd.colorscheme(color)
-end
-function SetLatte(color)
-	color = color or "catppuccin-latte"
-	vim.cmd.colorscheme(color)
+Latte = "catppuccin-latte"
+Mocha = "catppuccin-mocha"
+Frappe = "catppuccin-frappe"
+function SetColor(color)
+    vim.cmd.colorscheme(color)
 end
 
-SetLatte()
+SetColor(Latte)
