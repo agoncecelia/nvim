@@ -8,8 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.2',
-    -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
@@ -70,6 +69,12 @@ return require('packer').startup(function(use)
     end
   }
   use {
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  }
+  use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     requires = {
@@ -91,4 +96,5 @@ return require('packer').startup(function(use)
       })
     end
   }
+  use "github/copilot.vim"
 end)
