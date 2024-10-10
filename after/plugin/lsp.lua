@@ -6,7 +6,7 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
-require('lspconfig').tsserver.setup({
+require('lspconfig').ts_ls.setup({
   init_options = {
     preferences = {
       -- other preferences...

@@ -6,7 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
+  use 'nvim-tree/nvim-web-devicons'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }
@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = false }
   }
 
   use {
@@ -97,4 +97,9 @@ return require('packer').startup(function(use)
     end
   }
   use "github/copilot.vim"
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+  use 'theHamsta/nvim-dap-virtual-text'
+  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+  use { "microsoft/vscode-js-debug", opt = true, run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" }
 end)
