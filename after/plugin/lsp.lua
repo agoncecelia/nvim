@@ -12,6 +12,7 @@ require('lspconfig').ts_ls.setup({
       -- other preferences...
       importModuleSpecifierPreference = 'non-relative',
       importModuleSpecifierEnding = 'minimal',
+      autoImport = true,
     },
   }
 })

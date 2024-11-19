@@ -77,6 +77,16 @@ vim.keymap.set('n', '<Leader>ds', function()
   widgets.centered_float(widgets.scopes)
 end)
 
+-- Clear all dap breakpoints
+vim.keymap.set('n', '<Leader>db', function()
+  require('dap').clear_breakpoints()
+end)
+
+-- Stop debugger
+vim.keymap.set('n', '<Leader>dX', function()
+  require('dap').terminate()
+end)
+
 -- Signs
 vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
 vim.fn.sign_define('DapStopped', {text='▶️', texthl='', linehl='', numhl=''})
