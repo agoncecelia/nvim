@@ -174,6 +174,5 @@ require("oil").setup({
   keymaps_help = {
     border = "rounded",
   },
-
-  vim.keymap.set("n", "\\", require("oil").toggle_float)
 })
+vim.keymap.set("n", "\\", require("oil").toggle_float)

@@ -29,7 +29,6 @@ telescope.setup {
     }
   },
 }
-
 vim.keymap.set('n', '<leader>fs', function()
   builtin.grep_string();
 end)

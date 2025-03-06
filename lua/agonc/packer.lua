@@ -9,7 +9,18 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { { 'nvim-lua/plenary.nvim' } },
+    dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+    },
+    opts = {
+      defaults = {
+        path_display = {shorten = 3},
+        prompt_prefix = "> ",
+      },
+      extensions_list = {"fzf", "terms", "themes"},
+    }
   }
   use "nvim-lua/plenary.nvim"
   use {
@@ -101,7 +112,7 @@ return require('packer').startup(function(use)
       })
     end
   }
-  use "github/copilot.vim"
+  --use "github/copilot.vim"
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use 'theHamsta/nvim-dap-virtual-text'

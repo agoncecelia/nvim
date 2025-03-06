@@ -19,8 +19,8 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 
-vim.keymap.set('n', '<leader>q', ':bp<CR>')
-vim.keymap.set('n', '<leader>w', ':bn<CR>')
+vim.keymap.set('n', '<leader>1', ':bp<CR>')
+vim.keymap.set('n', '<leader>2', ':bn<CR>')
 
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
