@@ -1,6 +1,6 @@
 require("agonc.remap")
 require("agonc.set")
-require("agonc.packer")
+require("agonc.lazy")
 
 function Remember_cursor_position()
     local last_pos_line = vim.fn.line("'\"")
